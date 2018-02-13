@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="0dp"
+    android:paddingRight="0dp"
+    android:background="@color/blue_for_keyboard_blur_2">
+
+
+    <com.google.android.gms.ads.AdView
+        xmlns:ads="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/mAdView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        ads:adSize="SMART_BANNER"
+        ads:adUnitId="@string/banner_test_ad_unit_id">
+    </com.google.android.gms.ads.AdView>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/mAdView"
+        android:background="@drawable/background_gameplay_3"
+        android:clipChildren="false"
+        android:orientation="vertical">
+
+
+
+        <LinearLayout
+            android:id="@+id/ll_upper_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:clipChildren="false"
+            android:orientation="vertical">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="0.2">
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1.8"
+                android:orientation="vertical"
+                android:gravity="center">
+
+                <LinearLayout
+                    android:id="@+id/layout_keybaord_solve"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="6">
+
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_weight="1"
+                        android:src="@drawable/letter_blank_background" />
+
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:id="@+id/layout_keybaord_solve_2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="6">
+
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_weight="1"
+                        android:src="@drawable/letter_blank_background" />
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+
+        <ImageView
+            android:id="@+id/img_model_top"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:src="@drawable/model_boy" />
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:weightSum="7"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="4"
+                android:clipChildren="true"
+                android:orientation="vertical"
+                android:gravity="center">
+
+                <LinearLayout
+                    android:id="@+id/layout_keybaord"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/keyboard_bg_rounded"
+                    android:orientation="horizontal"
+                    android:weightSum="6">
+
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:src="@drawable/a" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/layout_keybaord_2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/keyboard_bg_rounded"
+                    android:orientation="horizontal"
+                    android:weightSum="6">
+
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:src="@drawable/a" />
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="0.5"
+                android:visibility="gone">
+
+                <com.smartysoft.wordpuzzle.view.MyTextView
+                    android:id="@+id/pu_notification_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:text="3 power available"
+                    android:textColor="@color/white"
+                    app:fontName="BRLNSR.TTF" />
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/pu_layout"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="3"
+                android:layout_marginBottom="4dp"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center_horizontal|bottom">
+
+                    <Button
+                        android:id="@+id/btn_solve_letter"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:background="@drawable/pu_solve_letter_btn_selector" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center_horizontal|bottom">
+
+                    <Button
+                        android:id="@+id/btn_add_time"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:background="@drawable/pu_add_time_btn_selector" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center_horizontal|bottom">
+
+                    <Button
+                        android:id="@+id/btn_jump_level"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:background="@drawable/pu_jump_level_btn_selector" />
+                </LinearLayout>
+
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/main_correct_word_complement"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:src="@drawable/correct"
+            android:visibility="invisible" />
+
+
+    </RelativeLayout>
+
+
+
+
+
+
+
+</RelativeLayout>
+
+
+
+
+
+

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+Google Play game services IDs.
+Save this file as res/values/games-ids.xml in your project.
+-->
+<resources>
+
+  <string name="banner_ad_unit_id">ca-app-pub-2791441956419928/7102394082</string>
+  <string name="banner_test_ad_unit_id">ca-app-pub-2791441956419928/7102394082</string>
+
+  <string name="intertitial_ad_unit_id">ca-app-pub-2791441956419928/1940678694</string>
+  <string name="intertitial_test_ad_unit_id">ca-app-pub-3940256099942544/1033173712</string>
+
+  <string name="app_id">638766532389</string>
+  <string name="leaderboard_highestscore">CgkIpY7Py8sSEAIQAQ</string>
+</resources>

@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/dialoggameover_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_game_over_3">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:src="@drawable/model_boy" />
+
+    <ImageView
+        android:id="@+id/dialoggameover_title"
+        android:layout_marginTop="30dp"
+        android:layout_centerHorizontal="true"
+        android:layout_width="wrap_content"
+        android:layout_height="80dp"
+        android:src="@drawable/dialoggameover_title"/>
+
+    <ImageView
+        android:id="@+id/dialoggameover_score_title"
+        android:layout_width="wrap_content"
+        android:layout_height="70dp"
+        android:layout_below="@+id/dialoggameover_title"
+        android:layout_alignLeft="@+id/dialoggameover_title"
+        android:src="@drawable/dialoggameover_score_title"/>
+
+
+
+    <LinearLayout
+        android:id="@+id/dialoggameover_score"
+        android:layout_width="wrap_content"
+        android:layout_height="70dp"
+        android:layout_below="@+id/dialoggameover_title"
+        android:layout_marginLeft="10dp"
+        android:layout_toRightOf="@+id/dialoggameover_score_title"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:src="@drawable/number_1"/>
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:src="@drawable/number_1"/>
+
+    </LinearLayout>
+
+
+    <ImageView
+        android:id="@+id/dialoggameover_top_title"
+        android:layout_width="wrap_content"
+        android:layout_height="70dp"
+        android:layout_below="@+id/dialoggameover_score_title"
+        android:layout_alignLeft="@+id/dialoggameover_score_title"
+        android:src="@drawable/dialoggameover_top_title"/>
+
+
+
+    <LinearLayout
+        android:id="@+id/dialoggameover_top"
+        android:layout_width="wrap_content"
+        android:layout_height="70dp"
+        android:layout_below="@+id/dialoggameover_score_title"
+        android:layout_marginLeft="10dp"
+        android:layout_toRightOf="@+id/dialoggameover_top_title"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:src="@drawable/number_7"/>
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:src="@drawable/number_1"/>
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/dialoggameoverbtn_playagain"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="50dp"
+        android:layout_alignLeft="@+id/dialoggameover_top_title"
+        android:layout_below="@+id/dialoggameover_top_title"
+        android:src="@drawable/btn_play_selector"/>
+
+    <ImageView
+        android:id="@+id/dialoggameoverbtn_hone"
+        android:layout_width="150dp"
+        android:layout_height="80dp"
+        android:layout_alignLeft="@+id/dialoggameover_top_title"
+        android:layout_below="@+id/dialoggameoverbtn_playagain"
+        android:src="@drawable/icon_home"/>
+
+</RelativeLayout>
