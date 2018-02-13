@@ -127,6 +127,8 @@ public class GamePlay extends AppCompatActivity implements View.OnClickListener,
    // private TextView tv_plus_time;
     private int current_level_countdown_sec;
 
+    private ImageView img_flag;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -214,6 +216,8 @@ public class GamePlay extends AppCompatActivity implements View.OnClickListener,
 
         //tv_plus_time = (TextView) findViewById(R.id.tv_plus_time);
 
+        img_flag = (ImageView) findViewById(R.id.img_flag);
+
     }
 
     private void doOnlyFirstTimeInitialization() {
@@ -275,6 +279,16 @@ public class GamePlay extends AppCompatActivity implements View.OnClickListener,
                 finish();
             }
         }
+
+        if(GamePlay.this.getResources()
+                .getIdentifier(levelQuestString, "drawable",
+                        getPackageName()) >= 0){
+            img_flag.setBackgroundResource(GamePlay.this.getResources()
+                    .getIdentifier(levelQuestString, "drawable",
+                            getPackageName()));
+        }
+
+
 
         string_track = new Integer[levelQuestString.length()];
         userWordCharArray = new char[levelQuestString.length()];
