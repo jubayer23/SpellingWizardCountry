@@ -1,4 +1,4 @@
-package com.smartysoft.wordpuzzle.appdata;
+package com.smartysoft.wordpuzzlecountry.appdata;
 
 import java.util.ArrayList;
 import java.util.HashMap;

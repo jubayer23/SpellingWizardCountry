@@ -1,4 +1,4 @@
-package com.smartysoft.wordpuzzle.service;
+package com.smartysoft.wordpuzzlecountry.service;
 
 import android.app.Service;
 import android.content.Intent;

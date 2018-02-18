@@ -1,4 +1,4 @@
-package com.smartysoft.wordpuzzle.view;
+package com.smartysoft.wordpuzzlecountry.view;
 
 import android.content.Context;
 import android.content.res.TypedArray;
@@ -6,7 +6,7 @@ import android.graphics.Typeface;
 import android.util.AttributeSet;
 import android.widget.TextView;
 
-import com.smartysoft.wordpuzzle.R;
+import com.smartysoft.wordpuzzlecountry.R;
 
 /**
  * Created by comsol on 09-Dec-15.

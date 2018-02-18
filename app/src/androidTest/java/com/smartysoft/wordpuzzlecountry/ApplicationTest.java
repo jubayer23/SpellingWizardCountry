@@ -1,4 +1,4 @@
-package com.smartysoft.wordpuzzle;
+package com.smartysoft.wordpuzzlecountry;
 
 import android.app.Application;
 import android.test.ApplicationTestCase;

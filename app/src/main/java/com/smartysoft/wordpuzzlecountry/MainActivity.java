@@ -1,4 +1,4 @@
-package com.smartysoft.wordpuzzle;
+package com.smartysoft.wordpuzzlecountry;
 
 import android.app.Dialog;
 import android.content.ComponentName;
@@ -11,7 +11,6 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.os.IBinder;
 import android.support.v7.app.AppCompatActivity;
-import android.util.Log;
 import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
@@ -26,10 +25,10 @@ import com.google.android.gms.common.api.GoogleApiClient;
 import com.google.android.gms.games.Games;
 import com.google.android.gms.plus.Plus;
 import com.google.example.games.basegameutils.BaseGameUtils;
-import com.smartysoft.wordpuzzle.Utils.langDict;
-import com.smartysoft.wordpuzzle.appdata.AppConstant;
-import com.smartysoft.wordpuzzle.appdata.AppController;
-import com.smartysoft.wordpuzzle.service.MusicService;
+import com.smartysoft.wordpuzzlecountry.Utils.langDict;
+import com.smartysoft.wordpuzzlecountry.appdata.AppConstant;
+import com.smartysoft.wordpuzzlecountry.appdata.AppController;
+import com.smartysoft.wordpuzzlecountry.service.MusicService;
 import com.daimajia.androidanimations.library.Techniques;
 import com.daimajia.androidanimations.library.YoYo;
 

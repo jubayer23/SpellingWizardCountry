@@ -1,10 +1,10 @@
-package com.smartysoft.wordpuzzle.appdata;
+package com.smartysoft.wordpuzzlecountry.appdata;
 
 import android.app.Application;
 import android.util.DisplayMetrics;
 
 import com.google.android.gms.ads.MobileAds;
-import com.smartysoft.wordpuzzle.sharedPref.PrefManager;
+import com.smartysoft.wordpuzzlecountry.sharedPref.PrefManager;
 
 
 /**

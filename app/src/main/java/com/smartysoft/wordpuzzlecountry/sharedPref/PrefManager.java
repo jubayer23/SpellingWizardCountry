@@ -1,11 +1,11 @@
-package com.smartysoft.wordpuzzle.sharedPref;
+package com.smartysoft.wordpuzzlecountry.sharedPref;
 
 
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.content.SharedPreferences.Editor;
 
-import com.smartysoft.wordpuzzle.appdata.AppConstant;
+import com.smartysoft.wordpuzzlecountry.appdata.AppConstant;
 
 
 public class PrefManager {

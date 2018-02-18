@@ -17,7 +17,7 @@
         android:layout_centerHorizontal="true"
         android:layout_alignParentBottom="true"
         ads:adSize="SMART_BANNER"
-        ads:adUnitId="@string/banner_test_ad_unit_id">
+        ads:adUnitId="@string/banner_ad_unit_id">
     </com.google.android.gms.ads.AdView>
 
     <RelativeLayout
@@ -34,20 +34,42 @@
             android:id="@+id/ll_upper_container"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
             android:clipChildren="false"
             android:orientation="vertical">
 
 
-            <LinearLayout
+            <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
+                android:orientation="horizontal"
                 android:layout_weight="0.2">
 
+                <TextView
+                    android:id="@+id/tv_score"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Score: 0"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginLeft="5dp"
+                    android:textColor="@color/white"/>
 
-            </LinearLayout>
+                <TextView
+                    android:id="@+id/tv_timer"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="2:00"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="5dp"
+                    android:textColor="@color/white"/>
+
+            </RelativeLayout>
 
             <LinearLayout
+                android:id="@+id/ll_solve_keyboard_container"
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:layout_weight="1.8"
@@ -106,9 +128,10 @@
 
         <ImageView
             android:id="@+id/img_flag"
-            android:layout_width="match_parent"
+            android:layout_width="400dp"
             android:layout_height="150dp"
-            android:layout_margin="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
             android:layout_centerInParent="true"
             android:background="@drawable/bangladesh" />
 
@@ -171,7 +194,7 @@
                 android:layout_weight="0.5"
                 android:visibility="gone">
 
-                <com.smartysoft.wordpuzzle.view.MyTextView
+                <com.smartysoft.wordpuzzlecountry.view.MyTextView
                     android:id="@+id/pu_notification_tv"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"

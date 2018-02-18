@@ -1,6 +1,6 @@
-package com.smartysoft.wordpuzzle.Utils;
+package com.smartysoft.wordpuzzlecountry.Utils;
 
-import com.smartysoft.wordpuzzle.appdata.AppConstant;
+import com.smartysoft.wordpuzzlecountry.appdata.AppConstant;
 
 import java.io.BufferedReader;
 import java.io.IOException;

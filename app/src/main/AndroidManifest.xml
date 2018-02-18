@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.smartysoft.wordpuzzle">
+    package="com.smartysoft.wordpuzzlecountry">
 
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.INTERNET" />
 
     <application
-        android:name=".appdata.AppController"
+        android:name="com.smartysoft.wordpuzzlecountry.appdata.AppController"
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher_3"
+        android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name_word_fun"
         android:theme="@style/AppTheme.NoActionBar">
         <activity
-            android:name=".SplashActivity"
+            android:name="com.smartysoft.wordpuzzlecountry.SplashActivity"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
@@ -22,17 +22,17 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".MainActivity"
+            android:name="com.smartysoft.wordpuzzlecountry.MainActivity"
             android:label="@string/app_name"
             android:screenOrientation="portrait"></activity>
         <activity
-            android:name=".GamePlay"
+            android:name="com.smartysoft.wordpuzzlecountry.GamePlay"
             android:label="@string/title_activity_game_play"
-            android:parentActivityName=".MainActivity"
+            android:parentActivityName="com.smartysoft.wordpuzzlecountry.MainActivity"
             android:screenOrientation="portrait">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.smartysoft.wordpuzzle.MainActivity" />
+                android:value="com.smartysoft.wordpuzzlecountry.MainActivity" />
         </activity>
 
         <!-- Include the AdActivity configChanges and theme. -->
@@ -42,7 +42,7 @@
             android:theme="@android:style/Theme.Translucent" />
 
         <service
-            android:name=".service.MusicService"
+            android:name="com.smartysoft.wordpuzzlecountry.service.MusicService"
             android:enabled="true"></service>
 
         <meta-data
@@ -52,7 +52,7 @@
             android:name="com.google.android.gms.version"
             android:value="@integer/google_play_services_version" />
 
-        <activity android:name=".HowToPlayActivity"></activity>
+        <activity android:name="com.smartysoft.wordpuzzlecountry.HowToPlayActivity"></activity>
     </application>
 
 </manifest>

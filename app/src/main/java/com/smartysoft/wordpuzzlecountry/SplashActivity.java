@@ -1,4 +1,4 @@
-package com.smartysoft.wordpuzzle;
+package com.smartysoft.wordpuzzlecountry;
 
 import android.content.Intent;
 import android.os.AsyncTask;
@@ -6,9 +6,9 @@ import android.os.Bundle;
 import android.os.CountDownTimer;
 import android.support.v7.app.AppCompatActivity;
 
-import com.smartysoft.wordpuzzle.Utils.langDict;
-import com.smartysoft.wordpuzzle.appdata.AppConstant;
-import com.smartysoft.wordpuzzle.appdata.AppController;
+import com.smartysoft.wordpuzzlecountry.Utils.langDict;
+import com.smartysoft.wordpuzzlecountry.appdata.AppConstant;
+import com.smartysoft.wordpuzzlecountry.appdata.AppController;
 
 public class SplashActivity extends AppCompatActivity {
 

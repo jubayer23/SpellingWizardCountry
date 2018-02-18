@@ -1,4 +1,4 @@
-package com.smartysoft.wordpuzzle;
+package com.smartysoft.wordpuzzlecountry;
 
 import android.app.Dialog;
 import android.content.ComponentName;
@@ -27,16 +27,15 @@ import android.widget.Toast;
 
 import com.daimajia.androidanimations.library.Techniques;
 import com.daimajia.androidanimations.library.YoYo;
-import com.github.lzyzsd.circleprogress.DonutProgress;
 import com.google.android.gms.ads.AdListener;
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
 import com.google.android.gms.ads.InterstitialAd;
-import com.smartysoft.wordpuzzle.appdata.AppConstant;
-import com.smartysoft.wordpuzzle.appdata.AppController;
-import com.smartysoft.wordpuzzle.service.MusicService;
-import com.smartysoft.wordpuzzle.sharedPref.PrefManager;
-import com.smartysoft.wordpuzzle.view.MyTextView;
+import com.smartysoft.wordpuzzlecountry.appdata.AppConstant;
+import com.smartysoft.wordpuzzlecountry.appdata.AppController;
+import com.smartysoft.wordpuzzlecountry.service.MusicService;
+import com.smartysoft.wordpuzzlecountry.sharedPref.PrefManager;
+import com.smartysoft.wordpuzzlecountry.view.MyTextView;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -45,6 +44,7 @@ import java.util.List;
 import java.util.Random;
 import java.util.Timer;
 import java.util.TimerTask;
+import java.util.concurrent.TimeUnit;
 
 public class GamePlay extends AppCompatActivity implements View.OnClickListener, ServiceConnection {
 
@@ -128,6 +128,8 @@ public class GamePlay extends AppCompatActivity implements View.OnClickListener,
     private int current_level_countdown_sec;
 
     private ImageView img_flag;
+
+    private TextView tv_timer, tv_score;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -217,6 +219,9 @@ public class GamePlay extends AppCompatActivity implements View.OnClickListener,
         //tv_plus_time = (TextView) findViewById(R.id.tv_plus_time);
 
         img_flag = (ImageView) findViewById(R.id.img_flag);
+
+        tv_timer = (TextView) findViewById(R.id.tv_timer);
+        tv_score = (TextView) findViewById(R.id.tv_score);
 
     }
 
@@ -621,9 +626,17 @@ public class GamePlay extends AppCompatActivity implements View.OnClickListener,
             public void onTick(long millisUntilFinished) {
                 remaining_sec = (float) (millisUntilFinished / 1000);
                 // donutProgress.setText(String.valueOf(remaining_sec));
+                tv_timer.setText(String.format("%02d:%02d",
+                        TimeUnit.MILLISECONDS.toMinutes(millisUntilFinished),
+                        TimeUnit.MILLISECONDS.toSeconds(millisUntilFinished) -
+                                TimeUnit.MINUTES.toSeconds(TimeUnit.MILLISECONDS.toMinutes(millisUntilFinished))
+                ));
+
             }
 
             public void onFinish() {
+
+                tv_timer.setText("00:00");
 
                 AppConstant.GAMEOVER_COUNTER++;
 
@@ -905,6 +918,7 @@ public class GamePlay extends AppCompatActivity implements View.OnClickListener,
         levelProgress++;
 
         //donutProgress.setText(String.valueOf(levelProgress));
+        tv_score.setText("Score: " + String.valueOf(levelProgress-1));
 
         if (((levelProgress - 1) % AppConstant.powerUpCircle) == 0) {
             updatePowerUp("plus", "null");
@@ -1541,6 +1555,7 @@ public class GamePlay extends AppCompatActivity implements View.OnClickListener,
             public void onClick(View view) {
 
 
+                tv_score.setText("Score: 0");
                 layout.startAnimation(move_up);
 
 
@@ -1689,7 +1704,7 @@ public class GamePlay extends AppCompatActivity implements View.OnClickListener,
 
 
         mInterstitialAd = new InterstitialAd(this);
-        mInterstitialAd.setAdUnitId(getString(R.string.intertitial_test_ad_unit_id));
+        mInterstitialAd.setAdUnitId(getString(R.string.intertitial_ad_unit_id));
         requestNewInterstitial();
 
         mInterstitialAd.setAdListener(new AdListener() {
